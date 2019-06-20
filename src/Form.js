@@ -16,7 +16,7 @@ function Form(props) {
 
   return (
     <form onSubmit={handleSubmit} noValidate>
-      <label for="firstName">First Name:</label>
+      <label for="firstName">*First Name:</label>
       <input
         id="firstName"
         type="text"
@@ -26,7 +26,7 @@ function Form(props) {
         onChange={e => setFirstName(e.target.value)}
         required
       />
-      <label for="lastName">Last Name:</label>
+      <label for="lastName">*Last Name:</label>
       <input
         type="text"
         id="lastName"
@@ -35,7 +35,7 @@ function Form(props) {
         onChange={e => setLastName(e.target.value)}
         required
       />
-      <label for="age">Age:</label>
+      <label for="age">Age (optional):</label>
       <input
         type="text"
         id="age"
@@ -44,7 +44,7 @@ function Form(props) {
         onChange={e => setAge(e.target.value)}
         required
       />
-      <input type="submit" value="Submit" />
+      <button type="submit">Log In</button>
     </form>
   );
 }

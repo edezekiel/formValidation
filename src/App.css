@@ -23,8 +23,14 @@ label {
 input {
   outline: none;
   padding: 10px;
+  border-radius: 10px;
+  border: solid 1px lightgrey;
 }
 
-input[type="submit"] {
+button[type="submit"] {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
   margin-top: 3vh;
+  border: solid 1px lightgrey;
 }
