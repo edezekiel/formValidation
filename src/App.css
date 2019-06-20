@@ -8,10 +8,23 @@
 
 form {
   background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
   width: 50vw;
   height: 50vh;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  padding: 10px;
 }
 
 input {
   outline: none;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  margin-top: 3vh;
 }

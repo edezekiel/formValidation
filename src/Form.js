@@ -8,7 +8,7 @@ function Form(props) {
   const handleSubmit = e => {
     e.preventDefault();
     if (e.target.checkValidity()) {
-      alert(`Submitting Bio ${firstName, lastName, age}`);
+      alert(`Submitting Bio ${(firstName, lastName, age)}`);
     } else {
       alert("invalid");
     }
@@ -16,39 +16,34 @@ function Form(props) {
 
   return (
     <form onSubmit={handleSubmit} noValidate>
-      <label>
-        First Name:
-        <input
-          type="text"
-          id="firstName"
-          name="txtFName"
-          value={firstName}
-          onChange={e => setFirstName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Last Name:
-        <input
-          type="text"
-          id="lastName"
-          name="txtLName"
-          value={lastName}
-          onChange={e => setLastName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-         Age:
-        <input
-          type="text"
-          id="firstName"
-          name="intAge"
-          value={age}
-          onChange={e => setAge(e.target.value)}
-          required
-        />
-      </label>
+      <label for="firstName">First Name:</label>
+      <input
+        id="firstName"
+        type="text"
+        id="firstName"
+        name="txtFName"
+        value={firstName}
+        onChange={e => setFirstName(e.target.value)}
+        required
+      />
+      <label for="lastName">Last Name:</label>
+      <input
+        type="text"
+        id="lastName"
+        name="txtLName"
+        value={lastName}
+        onChange={e => setLastName(e.target.value)}
+        required
+      />
+      <label for="age">Age:</label>
+      <input
+        type="text"
+        id="age"
+        name="intAge"
+        value={age}
+        onChange={e => setAge(e.target.value)}
+        required
+      />
       <input type="submit" value="Submit" />
     </form>
   );
