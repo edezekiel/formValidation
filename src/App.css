@@ -1,5 +1,4 @@
 .appContainer {
-  background-color: yellow;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -8,7 +7,7 @@
 }
 
 form {
-  background-color: orange;
+  background-color: lightgrey;
   width: 50vw;
   height: 50vh;
 }

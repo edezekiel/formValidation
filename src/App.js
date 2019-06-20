@@ -1,11 +1,11 @@
 import React from 'react';
-import ValidationForm from './ValidationForm'
+import Form from './Form'
 import './App.css'
 
 function App() {
   return (
     <div className="appContainer">
-      <ValidationForm />
+      <Form />
     </div>
   );
 }
