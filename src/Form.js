@@ -1,49 +1,41 @@
 import React, { useState } from "react";
 
 function Form(props) {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = e => {
     e.preventDefault();
     if (e.target.checkValidity()) {
-      alert(`Submitting Bio ${(firstName, lastName, age)}`);
+      alert(`Submitting Bio ${(email, password)}`);
     } else {
       alert("invalid");
     }
   };
 
+  
   return (
     <form onSubmit={handleSubmit} noValidate>
-      <label for="firstName">*First Name:</label>
+      <label for="email">*Email:</label>
       <input
-        id="firstName"
-        type="text"
-        id="firstName"
-        name="txtFName"
-        value={firstName}
-        onChange={e => setFirstName(e.target.value)}
+        type="email"
+        id="email"
+        name="email"
+        value={email}
+        onChange={e => setEmail(e.target.value)}
         required
       />
-      <label for="lastName">*Last Name:</label>
+      <label for="password">*Password:</label>
       <input
-        type="text"
-        id="lastName"
-        name="txtLName"
-        value={lastName}
-        onChange={e => setLastName(e.target.value)}
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+        type="password"
+        id="password"
+        name="password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
         required
       />
       <label for="age">Age (optional):</label>
-      <input
-        type="text"
-        id="age"
-        name="intAge"
-        value={age}
-        onChange={e => setAge(e.target.value)}
-        required
-      />
       <button type="submit">Log In</button>
     </form>
   );
